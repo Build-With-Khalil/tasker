@@ -23,7 +23,10 @@ class AddTodoView extends StatelessWidget {
         ),
         title: Text(
           'Add Todo',
-          style: Theme.of(context).textTheme.headlineSmall,
+          style: Theme.of(context)
+              .textTheme
+              .headlineSmall!
+              .apply(color: Colors.white),
         ),
         centerTitle: true,
         backgroundColor: Theme.of(context).colorScheme.primary,
@@ -54,7 +57,9 @@ class AddTodoView extends StatelessWidget {
                     ),
                     child: Text(
                       "Add",
-                      style: Theme.of(context).textTheme.titleLarge,
+                      style: Theme.of(context).textTheme.titleLarge!.apply(
+                            color: Colors.white,
+                          ),
                     ),
                   ),
                 ),
