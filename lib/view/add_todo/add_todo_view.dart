@@ -42,18 +42,18 @@ class AddTodoView extends StatelessWidget {
                   maxLine: 1,
                 ),
                 CustomTextField(
-                  controller: provider.titleController,
+                  controller: provider.descriptionController,
                   hintText: "Description",
                 ),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: provider.submit,
+                    onPressed: () => provider.submit(context),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Theme.of(context).colorScheme.primary,
                     ),
                     child: Text(
-                      "Submit",
+                      "Add",
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
